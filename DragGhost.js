@@ -72,12 +72,13 @@
      * @constructor
      */
     function GhostImage(elem, additionalStyle) {
-        var $elem = $(elem),
+        var data, url, img,
+            $elem = $(elem),
             ghost = $elem.clone().get(0),
-            data,
-            url,
-            img,
-            css = $.extend(getStyleAttribute(elem), additionalStyle);
+            imageStyle = {
+                'position': 'static'
+            },
+            css = $.extend(getStyleAttribute(elem), additionalStyle, imageStyle);
 
         ghost.setAttribute('style', stylePropertiesToText(css));
         ghost.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
@@ -150,7 +151,7 @@
             event.pageY = origEv.screenY + $doc.scrollTop();
 
             return chain ? chain.apply(this, arguments) : event;
-        }    
+        };
     }
 
     // chaining to make sure existing filters are executed
