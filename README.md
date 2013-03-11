@@ -42,4 +42,4 @@ function handleDragstart(event) {
 
 
 
-[Tutorial](http://damien.antipa.at/2013/03/06/a-proper-ghost-overlay-for-native-html5-drag-and-drop-based-on-dom-elements/)
+http://damien.antipa.at/2013/03/11/a-proper-ghost-overlay-for-native-html5-drag-and-drop-based-on-dom-elements/)
